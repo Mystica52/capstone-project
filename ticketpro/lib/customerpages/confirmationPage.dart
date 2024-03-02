@@ -5,7 +5,7 @@ import 'package:ticketpro/headerWidget.dart';
 class ConfirmPage extends StatefulWidget {
 
 
-  ConfirmPage({super.key});
+  const ConfirmPage({super.key});
   @override
   _ConfirmPageState createState() => _ConfirmPageState();
 }
@@ -65,15 +65,15 @@ class _ConfirmPageState extends State<ConfirmPage> {
                         padding:  const EdgeInsets.only(left: 16.0), 
                         child: Row(
                           children: [
-                            Text("Ticket issued by:   ",
+                            const Text("Ticket issued by:   ",
                               style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                             ),
-                          Text(name , style: TextStyle(color: Colors.white))
+                          Text(name , style: const TextStyle(color: Colors.white))
                         ],
                       ),
                       ),
 
-                      SizedBox(height: 65,),
+                      const SizedBox(height: 65,),
                       Row(crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           buildHeaderCell('Date'),
@@ -81,7 +81,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                           buildHeaderCell('Seat No'),
                         ],
                       ),
-                      SizedBox(height: 25,),
+                      const SizedBox(height: 25,),
                       for (var rowData in tableData1)
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,7 +91,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                           buildTableCell(rowData['seat no'],false),
                           ],
                           ),
-                      SizedBox(height: 65,),
+                      const SizedBox(height: 65,),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -100,7 +100,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
                           buildHeaderCell('Amount'),
                         ],
                       ),
-                      SizedBox(height: 25,),
+                      const SizedBox(height: 25,),
                       for (var rowData in tableData1)
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -159,7 +159,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
     );
   }
  Widget buildTableCell(String? text,bool isAmount ) {
- Color backgroundColor = isAmount ? Color.fromARGB(255, 241, 136, 38) : Colors.transparent;
+ Color backgroundColor = isAmount ? const Color.fromARGB(255, 241, 136, 38) : Colors.transparent;
   return Expanded(
     child: Container(
       // padding: const EdgeInsets.all(8),
@@ -171,7 +171,7 @@ class _ConfirmPageState extends State<ConfirmPage> {
       ),
       child: Center(
         child: Text(text ?? '', 
-        style: TextStyle(
+        style: const TextStyle(
           color:Colors.white,
           fontFamily:'Poppins' ),
           ), // Use the null-aware operator ?? to handle null

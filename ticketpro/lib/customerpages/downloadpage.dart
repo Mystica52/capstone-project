@@ -5,7 +5,7 @@ import 'package:ticketpro/headerWidget.dart';
 class DownloadPage extends StatefulWidget {
 
 
-  DownloadPage({super.key});
+  const DownloadPage({super.key});
   @override
   _DownloadPageState createState() => _DownloadPageState();
 }
@@ -66,15 +66,15 @@ class _DownloadPageState extends State<DownloadPage> {
                         padding:  const EdgeInsets.only(left: 16.0), 
                         child: Row(
                           children: [
-                            Text("Ticket issued by:   ",
+                            const Text("Ticket issued by:   ",
                               style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                             ),
-                          Text(name , style: TextStyle(color: Colors.white))
+                          Text(name , style: const TextStyle(color: Colors.white))
                         ],
                       ),
                       ),
 
-                      SizedBox(height: 65,),
+                      const SizedBox(height: 65,),
                       Row(crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           buildHeaderCell('Date'),
@@ -82,7 +82,7 @@ class _DownloadPageState extends State<DownloadPage> {
                           buildHeaderCell('Seat No'),
                         ],
                       ),
-                      SizedBox(height: 25,),
+                      const SizedBox(height: 25,),
                       for (var rowData in tableData1)
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -92,7 +92,7 @@ class _DownloadPageState extends State<DownloadPage> {
                           buildTableCell(rowData['seat no'],false),
                           ],
                           ),
-                      SizedBox(height: 65,),
+                      const SizedBox(height: 65,),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -103,7 +103,7 @@ class _DownloadPageState extends State<DownloadPage> {
                           
                         ],
                       ),
-                      SizedBox(height: 25,),
+                      const SizedBox(height: 25,),
                       for (var rowData in tableData1)
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -181,7 +181,7 @@ class _DownloadPageState extends State<DownloadPage> {
 
       child: Center(
         child: Text(text ?? '', 
-        style: TextStyle(
+        style: const TextStyle(
           color:Colors.white,
           fontFamily:'Poppins' ),
           ), // Use the null-aware operator ?? to handle null

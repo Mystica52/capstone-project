@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ticketpro/ButtomAppBar.dart';
 import 'package:ticketpro/companypages/companyBottomAppBar.dart';
 import 'package:ticketpro/headerWidget.dart';
 

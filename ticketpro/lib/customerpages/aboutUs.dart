@@ -21,14 +21,14 @@ class AboutUsPage extends StatelessWidget {
         ),
       ),
       body:  Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                child:               Text(
+                child:               const Text(
                 'Welcome to our bus transport ticket booking app, your reliable travel companion for seamless journeys! Explore, book, and travel effortlessly to your desired destinations with ease. Our user-friendly app offers a range of routes, schedules, and secure payment options, ensuring a convenient booking experience. Join thousands of travelers relying on us for stress-free commuting and embark on your next adventure hassle-free.',
                 style: TextStyle(
                   fontSize: 16,
@@ -38,7 +38,7 @@ class AboutUsPage extends StatelessWidget {
               ),
               ),
 
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Container(
                 child: TextField(
           decoration: InputDecoration(
@@ -56,7 +56,7 @@ class AboutUsPage extends StatelessWidget {
               ),
               
 
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         Container(
           
                         child: TextField(
@@ -72,7 +72,7 @@ class AboutUsPage extends StatelessWidget {
           //  filled: true
           ),
         ),
-        ), SizedBox(height: 16,),
+        ), const SizedBox(height: 16,),
         Container(
           child: TextButton(
           onPressed: () {
@@ -83,7 +83,7 @@ class AboutUsPage extends StatelessWidget {
                             width: 100,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
-                              color: Color.fromARGB(255, 241, 136, 38),
+                              color: const Color.fromARGB(255, 241, 136, 38),
                             ),
                             child: const Center(
                               child: Text(

@@ -6,7 +6,7 @@ import 'package:ticketpro/headerWidget.dart';
 import 'package:ticketpro/customerpages/login.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key? key}) : super(key: key);
+  const Splash({super.key});
 
   @override
   _SplashState createState() => _SplashState();
@@ -50,7 +50,7 @@ class _SplashState extends State<Splash> {
               child: AnimatedOpacity(
                 duration: const Duration(milliseconds: 1000),
                 opacity: headerOpacity,
-                child: MyAppHeader(),
+                child: const MyAppHeader(),
               ),
             ),
             Center(

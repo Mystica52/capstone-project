@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "333292169536",
+    "project_id": "capstoneticketpro",
+    "storage_bucket": "capstoneticketpro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333292169536:android:7c6f57d6dc705c34dab2a5",
+        "android_client_info": {
+          "package_name": "com.example.ticketpro1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlJ24q2m_mZIDo1hkER-kTI9YT7xr2dio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

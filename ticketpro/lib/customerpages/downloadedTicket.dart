@@ -4,7 +4,7 @@ import 'package:ticketpro/headerWidget.dart';
 class DownloadedTicket extends StatefulWidget {
 
 
-  DownloadedTicket({super.key});
+  const DownloadedTicket({super.key});
   @override
   _DownloadedTicketState createState() => _DownloadedTicketState();
 }
@@ -51,15 +51,15 @@ class _DownloadedTicketState extends State<DownloadedTicket> {
                         padding:  const EdgeInsets.only(left: 16.0), 
                         child: Row(
                           children: [
-                            Text("Ticket issued by:   ",
+                            const Text("Ticket issued by:   ",
                               style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                             ),
-                          Text(name , style: TextStyle(color: Colors.white))
+                          Text(name , style: const TextStyle(color: Colors.white))
                         ],
                       ),
                       ),
 
-                      SizedBox(height: 65,),
+                      const SizedBox(height: 65,),
                       Row(crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           buildHeaderCell('Date'),
@@ -67,7 +67,7 @@ class _DownloadedTicketState extends State<DownloadedTicket> {
                           buildHeaderCell('Seat No'),
                         ],
                       ),
-                      SizedBox(height: 25,),
+                      const SizedBox(height: 25,),
                       for (var rowData in tableData1)
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +77,7 @@ class _DownloadedTicketState extends State<DownloadedTicket> {
                           buildTableCell(rowData['seat no'],false),
                           ],
                           ),
-                      SizedBox(height: 65,),
+                      const SizedBox(height: 65,),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -88,7 +88,7 @@ class _DownloadedTicketState extends State<DownloadedTicket> {
                           
                         ],
                       ),
-                      SizedBox(height: 25,),
+                      const SizedBox(height: 25,),
                       for (var rowData in tableData1)
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -134,7 +134,7 @@ class _DownloadedTicketState extends State<DownloadedTicket> {
 
       child: Center(
         child: Text(text ?? '', 
-        style: TextStyle(
+        style: const TextStyle(
           color:Colors.white,
           fontFamily:'Poppins' ),
           ), // Use the null-aware operator ?? to handle null

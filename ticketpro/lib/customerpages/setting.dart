@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:ticketpro/customerpages/aboutUs.dart';
@@ -8,7 +7,7 @@ import 'package:ticketpro/customerpages/changePassword.dart';
 import 'package:ticketpro/customerpages/editprofile.dart';
 class SettingPage extends StatefulWidget {
 
-  SettingPage({super.key});
+  const SettingPage({super.key});
   @override
   _SettingPageState createState() => _SettingPageState();
 }
@@ -108,7 +107,7 @@ class _SettingPageState extends State<SettingPage> {
           alignment: Alignment.topRight,
           
           child: IconButton(
-            icon:  Icon(Icons.edit, color: Color.fromARGB(255, 241, 136, 38),  ),
+            icon:  const Icon(Icons.edit, color: Color.fromARGB(255, 241, 136, 38),  ),
             onPressed: () {
               Navigator.push(
               context,
@@ -125,13 +124,13 @@ class _SettingPageState extends State<SettingPage> {
         ),
               
               const SizedBox(height: 10),
-              Container(
+              SizedBox(
                         width: 300,
                         height: 40,
                         child:  Center(
                           child: Text(
                             name,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
@@ -185,7 +184,7 @@ class _SettingPageState extends State<SettingPage> {
                 child: ListView(
                   shrinkWrap: true,
           children: [
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             buildSettingRow(
               icon: Icons.notifications_active_outlined,
               label: 'Notifications',
@@ -200,9 +199,9 @@ class _SettingPageState extends State<SettingPage> {
             ),
             buildSeparator(),
             ListTile(
-                  leading: Icon(Icons.lock,color: Colors.white,),
-                  title: Text('Change Password', style: TextStyle(color: Colors.white),),
-                  trailing: Icon(Icons.chevron_right,color: Colors.white),
+                  leading: const Icon(Icons.lock,color: Colors.white,),
+                  title: const Text('Change Password', style: TextStyle(color: Colors.white),),
+                  trailing: const Icon(Icons.chevron_right,color: Colors.white),
                   onTap: () {
                     showDialog(
                 context: context,
@@ -214,36 +213,36 @@ class _SettingPageState extends State<SettingPage> {
                 ),
             buildSeparator(),
             ListTile(
-                  leading: Icon(Icons.privacy_tip_outlined, color: Colors.white,),
-                  title: Text('Privacy and security', style: TextStyle(color: Colors.white)),
-                  trailing: Icon(Icons.chevron_right,color: Colors.white),
+                  leading: const Icon(Icons.privacy_tip_outlined, color: Colors.white,),
+                  title: const Text('Privacy and security', style: TextStyle(color: Colors.white)),
+                  trailing: const Icon(Icons.chevron_right,color: Colors.white),
                   onTap: () {
                     _toggleChangePasswordVisibility();
                   },
                 ),
             buildSeparator(),
             ListTile(
-                  leading: Icon(Icons.assignment_outlined, color: Colors.white,),
-                  title: Text('Terms and Conditions', style: TextStyle(color: Colors.white)),
-                  trailing: Icon(Icons.chevron_right,color: Colors.white),
+                  leading: const Icon(Icons.assignment_outlined, color: Colors.white,),
+                  title: const Text('Terms and Conditions', style: TextStyle(color: Colors.white)),
+                  trailing: const Icon(Icons.chevron_right,color: Colors.white),
                   onTap: () {
                   },
                 ),
             buildSeparator(),
             ListTile(
-              leading: Icon(Icons.info_outline,color: Colors.white,),
-              title: Text('About Us', style: TextStyle(color: Colors.white)),
-              trailing: Icon(Icons.chevron_right,color: Colors.white),
+              leading: const Icon(Icons.info_outline,color: Colors.white,),
+              title: const Text('About Us', style: TextStyle(color: Colors.white)),
+              trailing: const Icon(Icons.chevron_right,color: Colors.white),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AboutUsPage(),
+                    builder: (context) => const AboutUsPage(),
                     ),
                     );
                   },
                 ),
-                 SizedBox(height: 16),
+                 const SizedBox(height: 16),
           ],
         ),
 
@@ -254,17 +253,17 @@ class _SettingPageState extends State<SettingPage> {
   height: 40,
   decoration: BoxDecoration(
     borderRadius: BorderRadius.circular(5),
-    color:  Color.fromARGB(255, 241, 136, 38), // Change the color as needed
+    color:  const Color.fromARGB(255, 241, 136, 38), // Change the color as needed
   ),
   child: TextButton.icon(
     onPressed: () {
       // Handle logout action
     },
-    icon: Icon(
+    icon: const Icon(
       Icons.logout, // Icon for logout
       color: Colors.white, // Icon color
     ),
-    label: Text(
+    label: const Text(
       'Logout',
       style: TextStyle(
         color: Colors.white,
@@ -298,8 +297,8 @@ class _SettingPageState extends State<SettingPage> {
             children: [
               Icon(icon,color: Colors.white,
               ),
-              SizedBox(width: 16),
-              Text(label,style: TextStyle(color: Colors.white),),
+              const SizedBox(width: 16),
+              Text(label,style: const TextStyle(color: Colors.white),),
             ],
           ),
           if (showToggle)
@@ -321,8 +320,8 @@ class _SettingPageState extends State<SettingPage> {
     );
   }
   Widget buildSeparator() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
       child: Divider(),
     );
   }
